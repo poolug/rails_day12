@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @pet.name %>
+</p>
+
+<p>
+  <strong>Raza:</strong>
+  <%= @pet.race %>
+</p>
+
+<p>
+  <strong>Fecha Cumpleaños:</strong>
+  <%= @pet.birthdate %>
+</p>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Peso promedio</th>
+      <th>Altura promedio</th>
+      <th>Peso Máximo</th>
+      <th>Altura Máxima</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @pet.avg_weight %></td>
+      <td><%= @pet.avg_height %></td>
+      <td><%= @pet.max_weight %></td>
+      <td><%= @pet.max_height %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_pet_path(@pet) %> |
+<%= link_to 'Back', pets_path %> |<br><br>
+<%= link_to 'Nueva Historia', new_pet_pet_history_path(@pet.id) %> |
+<%= link_to 'Ver Historias', pet_pet_histories_path(@pet.id) %> <br><br><br>
+
+<%#= @pet_history.pet_id %>
